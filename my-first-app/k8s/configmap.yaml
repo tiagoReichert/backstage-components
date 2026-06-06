@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-first-app-html
+  namespace: my-first-app
+  labels:
+    app: my-first-app
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>my-first-app</title>
+      <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+        .container { background: white; padding: 30px; border-radius: 8px; max-width: 600px; margin: 0 auto; }
+        h1 { color: #333; }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>my-first-app</h1>
+        <p>My first Backstage-deployed app</p>
+        <p><strong>Namespace:</strong> my-first-app</p>
+        <p><strong>Owner:</strong> user:guest</p>
+      </div>
+    </body>
+    </html>
